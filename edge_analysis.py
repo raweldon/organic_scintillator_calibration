@@ -228,7 +228,6 @@ if __name__ == '__main__':
     Set lin_scaling to true for linear amplitude scaling (EJ-309), 
         False for power law amplitude scaling (stilbene)
     '''
-    fin = '/cs_hists_coinc_t2.npy'
     fin = '/cs_meas_spectra.npy'
     det_no = 0  # 0 stilbene, 1 ej309
     spread = 28000 # initial guess for spread
