@@ -81,8 +81,8 @@ def calc_chisq(sim_x, sim_y, data_x, data_y):
     interp = interp1d(sim_x, sim_y, bounds_error=False, fill_value=0)
     sim_vals = interp(data_x)
     res = data_y - sim_vals
-    chisq = [x**2/sim_vals[i] for i, x in enumerate(res)]  
-    return chisq
+    chisq = [x**2/sim_vals[i]**2 for i, x in enumerate(res)]  
+    return np.sqrt(chisq)
 
 def minimize(fit_params, *args):
     '''
