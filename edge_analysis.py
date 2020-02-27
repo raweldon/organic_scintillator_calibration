@@ -178,10 +178,6 @@ def plot_fitted_spectra(shift, spread, lin_scale, args):
         plt.legend()
 
 def main(fin, det_no, spread, min_range, lin_scaling):
-    '''
-    Use for individual spectrum fits to get rough idea of initial values and limits for simultaneous fitting
-    Note: shift term is only accurate for simulataneous fit, do not use here
-    '''
 
     iso = 'cs'
     cwd = os.getcwd()
@@ -228,6 +224,7 @@ if __name__ == '__main__':
     Set lin_scaling to true for linear amplitude scaling (EJ-309), 
         False for power law amplitude scaling (stilbene)
     '''
+    
     fin = '/cs_meas_spectra.npy'
     det_no = 0  # 0 stilbene, 1 ej309
     spread = 28000 # initial guess for spread
